@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <style>
+            body {
+                height: 730px;
+                background: linear-gradient(#ffffff, #000000);
+                font-size: 20px;
+                font-family: Cursive;
+                font-weight: 900;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <p>Phone number is </p>
+        </div>
+
+        <script>
+            var num = "+380980768915";
+
+            for(let i = 0; i < num.length; i++) {
+                if(num[i] == 9 && i <5) {
+                    let theValue = num[i];
+                    document.write(' (' + theValue);
+                }
+                else if(num[i] == 8 && i<6 && i> 4) {
+                    let theValue2 = num[i];
+                    document.write(theValue2, ') ');
+                }
+                else if(i > 7 && i %2 == 0 && i < 11)                     {
+                    let theValue3= num[i];
+                    document.write('-', theValue3)
+                }
+                else {
+                    document.write(num[i]);
+                    num[i]++;
+                }
+            }
+        </script>
+    </body>
+</html>
